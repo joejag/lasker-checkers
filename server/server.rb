@@ -1,7 +1,12 @@
 require 'rubygems'
 require 'sinatra'
+require 'json'
 
-mime_type :json, "application/json"
+mime :json, "application/json"
+
+get '/hi' do
+  "Hello World!"
+end
 
 get "/action" do
   content_type :json
